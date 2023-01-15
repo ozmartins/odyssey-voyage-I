@@ -5,7 +5,9 @@
     ],
     "rules": {
         "react/react-in-jsx-scope": "off",
-        "no-multi-spaces": ["error"]
+        "no-multi-spaces": [
+            "error"
+        ]
     },
     "overrides": [
         {
@@ -17,6 +19,12 @@
             "env": {
                 "jest": true
             }
+        }
+    ],
+    "prettier/prettier": [
+        "error",
+        {
+            "endOfLine": "auto"
         }
     ]
 }

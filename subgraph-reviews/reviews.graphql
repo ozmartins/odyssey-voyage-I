@@ -9,6 +9,8 @@ type Review {
   comment: String
   "A number from 1 - 5 with 1 being lowest and 5 being highest"
   rating: Int
+  "The location the review it's related to"
+  location: Location
 }
 
 type Mutation {
@@ -33,4 +35,10 @@ type SubmitReviewResponse {
   message: String!
   "Newly created review"
   locationReview: Review
+}
+
+type Location @key(fields: "id") {
+  id: ID!
+  reviewsForLocation: [Review]!
+  overallRating: Float
 }
